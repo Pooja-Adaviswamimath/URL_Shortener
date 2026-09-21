@@ -1,0 +1,135 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    width: 80%;
+    max-width: 1000px;
+    margin: 100px auto;
+    background: white;
+    padding: 40px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+h1{
+    margin-bottom: 10px;
+}
+
+p{
+    color: #666;
+}
+
+input{
+    width:90%;
+    padding: 12px;
+    margin: 20px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button{
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    background-color: #333;
+    color: white;
+}
+
+button:hover{
+    opacity: 0.85;
+}
+
+.result{
+    margin-top: 30px;
+    padding: 20px;
+    background: #f0f0f0;
+    border-radius: 5px;
+}
+
+.result a{
+    word-break: break-all;
+}
+
+.error{
+    color:#d32f2f;
+    background-color: #ffebee;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.stats{
+    flex:1;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+}
+
+.stat-card{
+    flex: 1;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+}
+
+.stat-card h2{
+    font-size: 28px;
+    margin:5px;
+}
+
+.stat-card p{
+    margin: 5px;
+    color: #666;
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th,
+td{
+    border: 1px solid #ccc;
+    padding: 12px;
+    text-align: left;
+}
+
+th{
+    background-color: #f0f0f0;
+}
+
+td{
+    word-break: break-word;
+}
+
+.navbar{
+    background-color: #333;
+    padding: 15px;
+    text-align: center;
+}
+
+.navbar a{
+    color: white;
+    text-decoration: none;
+    margin: 0 20px;
+    font-weight: bold;
+}
+
+.navbar a:hover{
+    text-decoration: underline;
+}
+
+.subtitle{
+    font-size: 16px;
+    color: #777;
+    margin-bottom: 25px;
+}

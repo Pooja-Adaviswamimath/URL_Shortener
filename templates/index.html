@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>URL Shortener</title>
+    <link
+        rel = "stylesheet"
+        href = "{{ url_for('static', filename = 'style.css') }}"
+    >
+</head>
+
+<body>
+
+    <nav class = "navbar">
+
+        <a href = "/">Home</a>
+
+        <a href = "/history">History</a>
+
+        <a href = "/dashboard">Dashboard</a>
+    </nav>
+
+    <div class = "container">
+        <h1>URL Shortener</h1>
+        <p class = "subtitle">
+            Create short, simple, and shareable links.
+        </p>
+
+        {% if error %}
+            <p class = "error">{{ error }}</p>
+        {% endif %}
+
+        <form method = "post">
+            <input
+                type = "url"
+                name = "long_url"
+                placeholder="Enter your long URL"
+                value = "{{ long_url or '' }}"
+                required
+            >
+            <input
+                type="text"
+                name="custom_code"
+                placeholder="Custom short code (optional)"
+                
+            >
+            <button type = "submit">Shorten URL</button>
+        </form>
+
+        {% if short_url %}
+
+            <div class = "result">
+                <h3>Your Short URL</h3>
+
+                <input
+                    type = "text",
+                    id = "shortUrl",
+                    value = "{{ short_url }}"
+                    readonly
+                >
+
+                <button type = "button" onclick = "copyUrl()">
+                    Copy URL
+                </button>
+            </div>
+        {% endif %}
+    </div>
+    <script>
+        function copyUrl(){
+
+            const url = document.getElementById("shortUrl");
+
+            navigator.clipboard.writeText(url.value);
+
+            alert("Short URL copied");
+        }
+    </script>
+</body>
+</html>

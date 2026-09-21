@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>URL History</title>
+
+        <link
+            rel = "stylesheet"
+            href = "{{ url_for('static', filename = 'style.css') }}"
+        >
+    </head>
+
+    <body>
+
+        <nav class="navbar">
+
+            <a href="/">Home</a>
+
+            <a href="/history">History</a>
+
+            <a href="/dashboard">Dashboard</a>
+
+        </nav>
+        <div class = "container">
+            <h1>URL History</h1>
+
+            {% if urls %}
+
+            <table>
+
+                <tr>
+                    <th>Original URL</th>
+                    <th>Short URL</th>
+                    <th>Clicks</th>
+                </tr>
+
+                {% for url in urls %}
+
+                <tr>
+                    <td>
+                        {{ url["original_url"]}}
+                    </td>
+
+                    <td>
+                        <a href = "{{ url_for('redirect_url', short_code = url ['short_code']) }}">
+                            {{ url["short_code"] }}
+                        </a>
+                    </td>
+
+                    <td>
+                        {{ url["clicks"] }}
+                    </td>
+                    
+                </tr>
+
+                {% endfor %}
+            </table>
+
+            {% else %}
+
+            <p>No URLs have been created yet.</p>
+
+            {% endif %}
+
+            <br>
+
+            <a href = "/">Create New URl</a>
+        </div>
+    </body>
+</html>
