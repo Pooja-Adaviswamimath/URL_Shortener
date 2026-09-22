@@ -43,3 +43,19 @@ URL_shortener/
 │
 └── static/
     └── style.css
+
+## Screenshots
+
+### Home Page
+
+![Home Page](screenshots/home.png)
+
+### URL History
+
+![History Page](screenshots/history.png)
+
+### Analytics Dashboard
+
+![Dashboard Statistics](screenshots/dashboard-top.png)
+
+![Dashboard Analytics](screenshots/dashboard-analytics.png)
